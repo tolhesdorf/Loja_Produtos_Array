@@ -9,9 +9,13 @@ public class Produto {
         this.estoque = estoque;
     }
 
+    public double totalestoque(){
+        return preco*estoque;
+    }
+
     @Override
     public String toString() {
-        return "Produto: " + produto + "\nPreço: " + preco + " R$"+"\nQuantidade: " + estoque+"\n";
+        return "Produto: " + produto + "\nValor em estoque: " + totalestoque()+" R$\n";
     }
 }
 

@@ -13,9 +13,19 @@ public class Loja {
         loja[8] = new Produto("Fanta 2L", 10.30, 5);
         loja[9] = new Produto("Energético 300ML", 5.50, 4);
     }
-    public void ExibirLoja(){
-        for(int i=0; i<10;i++){
+
+    public double exibirvalorestoque(){
+        double soma = 0;
+        for(int i = 0; i < 10;i++){
+            soma = soma + loja[i].totalestoque();
+        }
+        return soma;
+    }
+
+    public void exibirloja(){
+        for(int i = 0; i < 10; i++){
             System.out.println(loja[i]);
         }
+        System.out.println("Valor total no estoque da loja: "+exibirvalorestoque()+" R$");
     }
 }
